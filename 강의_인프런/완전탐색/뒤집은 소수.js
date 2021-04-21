@@ -10,10 +10,10 @@ function solution(arr) {
   let answer = [];
   let nums = new Set();
   for (let x of arr) {
-    let result = x.toString().split("").reverse().join("");
-    if (isPrime(+result) && nums.has(+result) === false) {
-      answer.push(+result);
-      nums.add(+result);
+    let result = Number(x.toString().split("").reverse().join(""));
+    if (isPrime(result) && nums.has(result) === false) {
+      answer.push(result);
+      nums.add(result);
     }
   }
   return answer;
