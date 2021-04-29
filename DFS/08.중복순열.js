@@ -4,6 +4,7 @@ function solution(N, M) {
   function DFS(L) {
     if (L === M) {
       answer.push([...temp]);
+      // 왜 복사
     } else {
       for (let i = 1; i <= N; i++) {
         temp[L] = i;
